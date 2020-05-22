@@ -1,0 +1,19 @@
+ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+li {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.girl {
+  background: #ffc6e5;
+  color: #940050;
+}
+.boy {
+  background: #a0cfee;
+  color: #16527a;
+}
