@@ -27,8 +27,9 @@ body {
 }
 
 .header {
-  background: hsl(180, 14%, 20%);
   min-height: 156px;
+  background-image: url("http://127.0.0.1:5500/public/images/bg-header-desktop.svg");
+  background-color: hsl(180, 29%, 50%);
 }
 
 ul {
