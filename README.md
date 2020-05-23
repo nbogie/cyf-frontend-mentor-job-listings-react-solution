@@ -1,7 +1,9 @@
-rough React sample solution to the first part of the frontend-mentor "job listings" challenge
+rough React sample solution to the great frontend-mentor "job listings" challenge
 https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt
 
-no filtering
+This solution is in two parts, one per branch:
 
-considered for students in first week of react module at CYF
+- `master`: no filtering
+- `full`: full solution including filtering (but no responsive design)
 
+This is aimed at students in first week of the React module at [CYF](https://codeyourfuture.io/).
