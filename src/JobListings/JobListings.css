@@ -154,6 +154,9 @@ span {
   color: hsl(180, 14%, 20%);
   cursor: pointer;
 }
+.position:hover {
+  color: hsl(180, 29%, 50%);
+}
 
 footer {
   border-top: 2px solid #dddddd;
