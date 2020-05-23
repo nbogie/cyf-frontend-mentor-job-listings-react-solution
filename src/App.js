@@ -1,16 +1,10 @@
 import React from 'react';
-//import HighScoresChallenge from "./HighScores/HighScoresChallenge";
-import BabyNamesChallenge from "./BabyNames/BabyNamesChallenge";
+import JobListings from "./JobListings/JobListings";
 
 function App() {
   return (
     <div className="App">
-      {/*
-      <HighScoresChallenge />
-      <BabyNamesChallenge />
-      */ }
-      <BabyNamesChallenge />
-
+      <JobListings />
     </div>
   );
 }

@@ -1,0 +1,171 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  color: hsl(180, 29%, 50%);
+  background: hsl(180, 52%, 96%);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background: hsl(180, 14%, 20%);
+  min-height: 156px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.job-list {
+  margin: 80px auto;
+  max-width: 77.5%;
+}
+
+.job {
+  box-shadow: 0px 12px 20px hsla(180, 14%, 20%, 0.1);
+  background: white;
+  margin-bottom: 25px;
+  padding: 30px 40px;
+  border-radius: 5px;
+}
+
+.job-featured {
+  background: linear-gradient(90deg, hsl(180, 29%, 50%) 5px, white 5px);
+}
+
+.main-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.left-block {
+  display: flex;
+  align-items: center;
+}
+.image-slot {
+  margin-right: 20px;
+}
+.vblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.vblock div {
+  margin: 6px 10px;
+}
+span {
+  padding: 5px;
+}
+
+.new {
+  background: hsl(180, 29%, 50%);
+}
+.featured {
+  background: hsl(180, 14%, 20%);
+}
+
+.extra-detail-list {
+  display: flex;
+  align-items: center;
+}
+.extra-detail {
+  color: hsl(180, 8%, 52%);
+}
+.extra-detail + .extra-detail {
+  margin: 5px;
+}
+/* .extra-detail + .extra-detail::before {
+  content: ".";
+} */
+
+.pill {
+  font-size: x-small;
+  border-radius: 15px;
+  color: white;
+  margin-right: 6px;
+  font-weight: bold;
+  padding: 6px 10px 4px 10px;
+}
+.company {
+  font-weight: bold;
+  padding-left: 0px;
+  margin-right: 15px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.tag {
+  background: hsl(180, 31%, 95%);
+  font-weight: bold;
+  font-size: small;
+  border-radius: 5px;
+  margin: 3px 0px 3px 10px;
+  padding: 12px 5px 8px 5px;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: hsl(180, 29%, 50%);
+  color: white;
+}
+
+.position {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: larger;
+  color: hsl(180, 14%, 20%);
+  cursor: pointer;
+}
+
+footer {
+  border-top: 2px solid #dddddd;
+  color: #dddddd;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+.attribution {
+  margin-bottom: 5px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
