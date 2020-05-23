@@ -1,3 +1,5 @@
+//Flow diagram: https://excalidraw.com/#json=5680880538353664,5FOVmiVqJ_XfHphPRCxGCA
+
 import React, { useState } from 'react';
 import BabyNamesData from './BabyNamesData.json';
 import './BabyNamesChallenge.css';
@@ -138,7 +140,9 @@ const MainList = ({ names, clickHandler }) => {
 }
 
 const Footer = (props) => {
-    return <footer></footer>;
+    return <footer>
+        <a href="https://excalidraw.com/#json=5680880538353664,5FOVmiVqJ_XfHphPRCxGCA">Flow Diagram</a>
+    </footer>;
 }
 
 export default BabyNamesChallenge;
