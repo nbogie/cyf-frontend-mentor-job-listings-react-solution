@@ -45,7 +45,7 @@ ul {
 }
 
 .job-list {
-  margin: 80px auto;
+  margin: 0px auto;
   max-width: 77.5%;
 }
 
@@ -132,19 +132,62 @@ span {
   align-content: flex-end;
 }
 
-.tag {
+.tag,
+.tag-button {
   background: hsl(180, 31%, 95%);
   font-weight: bold;
   font-size: small;
   border-radius: 5px;
-  margin: 3px 0px 3px 10px;
-  padding: 12px 5px 8px 5px;
+  margin: 3px 6px 3px 10px;
+  padding: 12px 6px 8px 6px;
   cursor: pointer;
+}
+
+.tag-button {
+  display: flex;
+  padding: 0;
+  align-items: center;
 }
 
 .tag:hover {
   background: hsl(180, 29%, 50%);
   color: white;
+}
+
+.filter-bar {
+  position: relative;
+  top: -35px;
+  width: 77.5%;
+  min-height: 75px;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 20px 40px;
+  background: white;
+  display: flex;
+  box-shadow: 0px 12px 20px hsla(180, 14%, 20%, 0.1);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-tags {
+  display: flex;
+}
+
+.clear-button {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: small;
+}
+
+.remove-icon {
+  background: hsl(180, 29%, 50%);
+  color: white;
+  padding: 10px;
+}
+
+.remove-icon:hover {
+  background: hsl(180, 14%, 20%);
 }
 
 .position {
@@ -153,6 +196,9 @@ span {
   font-size: larger;
   color: hsl(180, 14%, 20%);
   cursor: pointer;
+}
+.position:hover {
+  color: hsl(180, 29%, 50%);
 }
 
 footer {

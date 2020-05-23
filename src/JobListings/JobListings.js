@@ -1,26 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import JobsData from './data.json';
 import './JobListings.css';
 
 function JobListings() {
+
+    const [selectedTags, setSelectedTags] = useState([]);
+
+    const removeTag = (tag) => {
+        setSelectedTags(selectedTags.filter(t => t !== tag));
+    }
+
+    const addTag = (tag) => {
+        if (!selectedTags.includes(tag)) {
+            setSelectedTags(selectedTags.concat([tag]));
+        }
+    }
+
+    const jobMatchesTag = (job, tag) => [job.tools, job.languages, [job.role], [job.level]].some(field => field.includes(tag))
+
+    const filterJobsByTags = (jobs, tags) => tags.length === 0 ? jobs : jobs.filter(j => tags.every(t => jobMatchesTag(j, t)))
+
     return (
-        <>
+        <div className="job-page">
             <div className="header"></div>
+
             <div className="content">
+                <div className="filter-bar">
+                    <div className="filter-tags">
+                        {
+                            selectedTags.map(tag =>
+                                <TagButton tag={tag} removeTag={removeTag} key={tag} />
+                            )
+                        }
+
+                    </div>
+                    <div
+                        className="clear-button"
+                        onClick={(e) => setSelectedTags([])}
+                    >
+                        Clear
+                    </div>
+                </div>
                 <div className="job-list">
                     {
-                        JobsData.map(job =>
-                            <JobCard job={job} key={job.id} />
+                        filterJobsByTags(JobsData, selectedTags).map(job =>
+                            <JobCard
+                                job={job}
+                                addTag={addTag}
+                                key={job.id}
+                            />
                         )
                     }
                 </div>
                 <Footer />
             </div>
-        </>
+        </div>
     )
 }
 
-function JobCard({ job }) {
+function JobCard({ job, addTag }) {
     return (
         <div className={"job " + (job.featured ? "job-featured" : "")}  >
             <div className="main-detail">
@@ -44,7 +82,9 @@ function JobCard({ job }) {
 
                 </div>
                 <div className="tags">
-                    {[job.role, job.level, ...job.tools, ...job.languages].map(t => <Tag tag={t} key={t} />)}
+                    {[job.role, job.level, ...job.tools, ...job.languages].map(t =>
+                        <Tag tag={t} addTag={addTag} key={t} />
+                    )}
                 </div>
 
             </div>
@@ -64,8 +104,30 @@ function Footer() {
     );
 }
 
-function Tag({ tag }) {
-    return <span className='tag'>{tag}</span>
+function Tag({ tag, addTag }) {
+    return (
+        <span
+            className='tag'
+            onClick={(ev) => addTag(tag)}
+        >
+            {tag}
+
+        </span>
+    )
+
+}
+function TagButton({ tag, removeTag }) {
+    return (
+        <span className='tag-button'>
+            <span className='foo'>{tag}</span>
+            <img
+                onClick={(ev) => removeTag(tag)}
+                className="remove-icon"
+                src="/images/icon-remove.svg"
+                alt="remove tag"
+            />
+        </span>
+    )
 
 }
 function prepImgPath(path) {
