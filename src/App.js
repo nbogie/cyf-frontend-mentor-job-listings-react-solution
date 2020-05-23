@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
-//import HighScoresChallenge from "./HighScoresChallenge";
-import BabyNamesChallenge from "./BabyNamesChallenge";
+//import HighScoresChallenge from "./HighScores/HighScoresChallenge";
+import BabyNamesChallenge from "./BabyNames/BabyNamesChallenge";
 
 function App() {
   return (
